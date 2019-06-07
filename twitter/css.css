@@ -1,0 +1,56 @@
+body{
+	margin: 0;
+}
+.header{
+	width: 100%;
+	height: 70px;
+	background: red;
+}
+.flex{
+	display: flex;
+}
+
+.txtglavnaya{
+	color: white;
+	font-size: 15px;
+	margin-left: 100px;
+	
+}
+
+.txtuvedom{
+	color: white;
+	font-size: 15px;
+	margin-left: 50px;
+}
+
+.txtsoob{
+	color: white;
+	font-size: 15px;
+	margin-left: 50px;
+}
+
+.iconglavnaya{
+	height: 25px;
+	width: 25px;
+}
+
+.iconuvedom{
+	height: 25px;
+	width: 25px;
+}
+
+.iconsoob{
+	height: 25px;
+	width: 25px;
+}
+
+.icontwitter{
+	height: 50px;
+	width: 50px;
+	margin-left: 130px;
+}
+
+.poiskicon{
+	height: 25px;
+	width: 25px;
+}
