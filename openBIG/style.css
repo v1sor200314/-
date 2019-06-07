@@ -1,0 +1,26 @@
+body{
+	margin: 0;
+}
+
+.href{
+	margin-right: 15px;
+	color: lightgray;
+
+}
+.nomer{
+
+}
+
+.logo{
+	height: 75px;
+	width: 200px;
+	margin-left: 75px;
+}
+.korzina{
+	height: 40px;
+	width: 40px;
+}
+.profil{
+	height: 40px;
+	width: 40px;
+}
