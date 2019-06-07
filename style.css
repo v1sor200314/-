@@ -1,0 +1,41 @@
+body{
+	margin: 0
+}
+.red{
+	background: red
+
+}
+.orange{
+	background: orange;
+	width: 100px;
+}
+.green{
+	background: green;
+	width: 50px;
+	margin-left: 900px;
+}
+.lightblue{
+	background: lightblue;
+	width: 50px;
+
+}
+.black{
+	background: black;
+	height: 20px;
+	width: 10000px;
+}
+.purple{
+	background: purple;
+	width: 10000px;
+	height: 150px;
+}
+.lightpink{
+	background: lightpink;
+	display: flex;
+}
+.gray{
+	background: gray;
+	height: 100px;
+	width: 200px;
+	margin-left: 110px;
+}

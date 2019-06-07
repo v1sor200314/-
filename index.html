@@ -2,76 +2,49 @@
 <html>
 <head>
 	<title></title>
-	<style type="text/css">
-		.hole{
-			width: 250px;
-			height: 200px;
-			background-image: url('dirt.svg');
-			background-size: 100% 100%;
-			margin-top: 200px;
-			margin-left: 10px;
-			z-index: 2;
-		}
-		.flex{
-			display: flex;
-		}
-		.mole{
-			position: absolute;
-			width: 120px;
-			z-index: 1;
-		}
-		body{
-			background: orange;
-		}
-	</style>
 </head>
 <body>
-	<div class="flex">
-		<div class="hole"></div>
-		<div class="hole"></div>
-		<div class="hole"></div>
-		<div class="hole"></div>
-		<div class="hole"></div>
-		<div class="hole"></div>
-	</div>
-	<script type="text/javascript">
-		let holes = document.querySelectorAll(".hole");
-		let mole = document.createElement("img");
-		document.body.appendChild(mole);
-		mole.src = "mole.svg";
-		mole.classList.add("mole");
+<div class="question"></div>
+<div class="answer"></div>
+<div class="answer"></div>
+<div class="answer"></div>
+<div class="answer"></div>
 
-		let score = 0;
+<script type="text/javascript">
+		let questions = ["Как думаете, сколько мне лет???", "Как думаете, какое у меня Отчество"];
+		let	answers = [[15, 13, 18, 16], ["Александрович", "Васильевич", "Альбертович", "Иннокентьевич"]];
+		let question_div = document.querySelector(".question");
+		let answer_div = document.querySelectorAll(".answer");
 
-		setInterval(show, Math.round(Math.random()*1000 + 500));
+		question_div.innerHTML = questions[0];
+		//answer[0].innerHTML = answers[0][0];
+		//answer[1].innerHTML = answers[0][1];
+		//answer[2].innerHTML = answers[0][2];
+		//answer[3].innerHTML = answers[0][3];
 
-		setTimeout(check, 5000);
-		var d=document.createElement('div');
-		document.body.appendChild(d);
+		for(var i=0;i<answer_div.length;i++){
+			answer_div[i].innerHTML = answers[0][i];
+			answer_div[i].onclick = function(){
+				if(this.innerHTML==15){
+					alert("Правильно")
 
-		function show(){
-			let rand = Math.round(Math.random()*5);
-			mole.style.top = holes[rand].getBoundingClientRect().top - 30 + "px";
-			mole.style.left = holes[rand].getBoundingClientRect().left + 35 + "px";
-		}
+					question_div.innerHTML = questions[1];
+					for(var j=0;j<answer_div.length;j++){
+						answer_div[j].innerHTML = answers[1][j]
+						answer_div[j].onclick = function(){
+							if(this.innerHTML == "Иннокентьевич"){
+								alert("Правильно")
+							}
+						}
+					}
 
-		mole.onclick = function(){
-			score++;
-			d.innerHTML = score;
+				}else{
+					alert("Не правильно")
+				}
+			}
 		}
 		
-		
 
-		function check(){
-			if(score>=5){
-				alert("You win")
-			}else{
-				alert("You lose")
-		}
-
-
-}
-	
-	</script>
+</script>
 </body>
 </html>
